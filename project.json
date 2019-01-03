@@ -11,8 +11,9 @@
     "cli": {
       "type": "npm-module",
       "bin": {
-        "example": "dist/bin.js"
+        "rpg": "dist/bin.js"
       }
     }
-  }
+  },
+  "templateInitVersion": "1.5.4"
 }
