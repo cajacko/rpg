@@ -1,1 +1,1 @@
-ReactDOMRe.renderToElementWithId(<Deck topCardFaceUp=true />, "root");
+ReactDOMRe.renderToElementWithId(<App />, "root");
