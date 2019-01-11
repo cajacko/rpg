@@ -21,5 +21,6 @@ let make = _children => {
     <div className=Styles.container>
       <div className=Styles.title> <Text text="Hands" /> </div>
       <HandsNav />
+      <Hand />
     </div>,
 };
