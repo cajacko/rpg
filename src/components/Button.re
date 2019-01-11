@@ -1,10 +1,24 @@
+module Styles = {
+  open Css;
+
+  let container =
+    style([display(flexBox), alignItems(center), justifyContent(center)]);
+};
+
+let mergeStyles = styles => {
+  switch (styles) {
+  | None => Styles.container
+  | Some(styles) => Css.(merge([Styles.container, styles]))
+  };
+};
+
 let component = ReasonReact.statelessComponent("Button");
 
 /* underscores before names indicate unused variables. We name them for clarity */
-let make = (~action, ~text=?, ~icon=?, _children) => {
+let make = (~action, ~text=?, ~icon=?, ~styles=?, _children) => {
   ...component,
   render: _self =>
-    <button onClick=action>
+    <button className={mergeStyles(styles)} onClick=action>
       {switch (text) {
        | None => ReasonReact.null
        | Some(text) => <Text text />

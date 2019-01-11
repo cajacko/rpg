@@ -1,7 +1,8 @@
 module Styles = {
   open Css;
 
-  let container = style([display(flexBox), flex(1)]);
+  let container =
+    style([display(flexBox), flex(1), flexDirection(column)]);
 };
 
 Css.(
@@ -21,9 +22,11 @@ Css.(
 
 let component = ReasonReact.statelessComponent("App");
 
-/* underscores before names indicate unused variables. We name them for clarity */
 let make = _children => {
   ...component,
   render: _self =>
-    <div className=Styles.container> <Deck topCardFaceUp=true /> </div>,
+    <div className=Styles.container>
+      <Deck topCardFaceUp=true />
+      <Hands />
+    </div>,
 };

@@ -20,7 +20,6 @@ module Styles = {
 
 let component = ReasonReact.statelessComponent("Card");
 
-/* underscores before names indicate unused variables. We name them for clarity */
 let make = (~faceUp, _children) => {
   ...component,
   render: _self =>

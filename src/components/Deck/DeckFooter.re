@@ -6,7 +6,6 @@ module Styles = {
 
 let component = ReasonReact.statelessComponent("DeckFooter");
 
-/* underscores before names indicate unused variables. We name them for clarity */
 let make = (~topCardFaceUp, ~toggleTopCardFaceUp, _children) => {
   ...component,
   render: _self =>

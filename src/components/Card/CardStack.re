@@ -33,7 +33,6 @@ let isFaceUp = (i, faceUp, topCardFaceUp) => {
   };
 };
 
-/* underscores before names indicate unused variables. We name them for clarity */
 let make = (~faceUp, ~topCardFaceUp=?, _children) => {
   ...component,
   render: _self =>

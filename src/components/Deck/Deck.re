@@ -14,7 +14,6 @@ type action =
 
 let component = ReasonReact.reducerComponent("Deck");
 
-/* underscores before names indicate unused variables. We name them for clarity */
 let make = (~topCardFaceUp, _children) => {
   ...component,
   initialState: () => {topCardFaceUp: topCardFaceUp},
