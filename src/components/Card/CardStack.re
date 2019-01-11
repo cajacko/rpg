@@ -12,40 +12,39 @@ module Styles = {
   let card = i => {
     let offset = px(i * offsetSize);
 
-    style([position(absolute), top(offset), left(offset)]);
+    switch (i) {
+    | 0 => style([display(flexBox)])
+    | i => style([position(absolute), top(offset), left(offset)])
+    };
   };
 };
 
 let component = ReasonReact.statelessComponent("CardStack");
 
-let items = [0, 1, 2, 3];
-
-let isFaceUp = (i, faceUp, topCardFaceUp) => {
-  let isLast = i + 1 == List.length(items);
-
-  if (isLast) {
-    switch (topCardFaceUp) {
-    | None => faceUp
-    | Some(topCardFaceUp) => topCardFaceUp
-    };
-  } else {
-    faceUp;
-  };
+type card = {
+  cardId: string,
+  faceUp: bool,
 };
+
+let cards: list(card) = [
+  {cardId: "1", faceUp: true},
+  {cardId: "2", faceUp: true},
+  {cardId: "3", faceUp: true},
+  {cardId: "4", faceUp: true},
+];
 
 let make = (~faceUp, ~topCardFaceUp=?, _children) => {
   ...component,
   render: _self =>
-    <div className={Styles.container(List.length(items))}>
-      <div> <Card faceUp=false /> </div>
+    <div className={Styles.container(List.length(cards))}>
       {ReasonReact.array(
          Array.of_list(
-           List.map(
-             item =>
-               <div key={string_of_int(item)} className={Styles.card(item)}>
-                 <Card faceUp={isFaceUp(item, faceUp, topCardFaceUp)} />
+           List.mapi(
+             (index, {cardId, faceUp}) =>
+               <div key=cardId className={Styles.card(index)}>
+                 <Card faceUp cardId />
                </div>,
-             items,
+             cards,
            ),
          ),
        )}

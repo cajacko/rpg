@@ -20,13 +20,13 @@ module Styles = {
 
 let component = ReasonReact.statelessComponent("Card");
 
-let make = (~faceUp, _children) => {
+let make = (~faceUp, ~cardId, _children) => {
   ...component,
   render: _self =>
     <div className={Styles.card(faceUp)}>
       <Text text="Card" />
       <div style={ReactDOMRe.Style.make(~display="flex", ())}>
-        <Text text={"State: " ++ (faceUp ? "Visible" : "Hidden")} />
+        <Text text={"Card ID: " ++ cardId} />
       </div>
     </div>,
 };
