@@ -1,10 +1,10 @@
 let component = ReasonReact.statelessComponent("Button");
 
 /* underscores before names indicate unused variables. We name them for clarity */
-let make = (~text=?, ~icon=?, _children) => {
+let make = (~action, ~text=?, ~icon=?, _children) => {
   ...component,
   render: _self =>
-    <button>
+    <button onClick=action>
       {switch (text) {
        | None => ReasonReact.null
        | Some(text) => <Text text />
