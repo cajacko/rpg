@@ -1,24 +1,31 @@
-type state = {hello: bool};
-
-let state: state = {hello: true};
+let currentState = ref(State.state);
 
 type subscription = {
   key: string,
-  callback: state => unit,
+  callback: State.state => unit,
 };
 
 let subscriptions = ref([]);
-
-let subscribe = (key, callback) => {
-  subscriptions := List.append(subscriptions^, [{key, callback}]);
-
-  callback(state);
-};
 
 let unsubscribe = removeKey => {
   subscriptions := List.filter(({key}) => removeKey != key, subscriptions^);
 };
 
-let dispatch = () => {
-  List.iter(({callback}) => callback(state), subscriptions^);
+let subscribe = (key, callback) => {
+  subscriptions := List.append(subscriptions^, [{key, callback}]);
+
+  () => unsubscribe(key);
 };
+
+let dispatch = actionType => {
+  List.iter(
+    reducer => currentState := reducer(currentState^, actionType),
+    Reducers.reducers,
+  );
+
+  Js.Console.log(currentState^);
+
+  List.iter(({callback}) => callback(currentState^), subscriptions^);
+};
+
+let getState = () => currentState^;
