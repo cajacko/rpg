@@ -6,6 +6,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.13",
     "@fortawesome/free-solid-svg-icons": "^5.7.0",
     "@fortawesome/react-fontawesome": "^0.1.4",
+    "firebase-tools": "^6.3.1",
     "lodash": "^4.17.11",
     "react": "^16.8.0-alpha.1",
     "react-dom": "^16.8.0-alpha.1",
@@ -24,15 +25,12 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "yarn build && firebase deploy",
+    "serve": "yarn build && firebase serve --only hosting"
   },
   "eslintConfig": {
     "extends": "react-app"
   },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+  "browserslist": [">0.2%", "not dead", "not ie <= 11", "not op_mini all"]
 }

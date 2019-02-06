@@ -10,7 +10,8 @@ export const mainRoutes = [
   { path: "/resources", component: ResourcesScene },
   { path: "/characters", component: Characters },
   { path: "/variables", component: Variables },
-  { path: "/roll", component: Roll }
+  { path: "/roll", component: Roll },
+  { component: ResourcesScene }
 ];
 
 export const resourcesRoutes = resourcesNavItems
