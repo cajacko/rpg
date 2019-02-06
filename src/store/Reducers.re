@@ -1,1 +1,0 @@
-let reducers = [DeckReducer.reducer, CardReducer.reducer];
