@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { connect } from "react-redux";
 import styled from "styled-components";
 import { addDice, removeDice, roll } from "../store/roll/actions";
-import { uniqueDiceResults } from "../config/diceResults";
+import { uniqueDiceResults, diceColors } from "../config/diceResults";
 
 const Container = styled.div`
   flex: 1;
@@ -44,7 +44,7 @@ const AllDice = styled.div`
 const Dice = styled.div`
   display: flex;
   padding: 20px;
-  background-color: #efefef;
+  background-color: ${({ backgroundColor }) => backgroundColor || "#f1f1f1"};
   margin-bottom: 10px;
 `;
 
@@ -57,7 +57,7 @@ const mapStateToProps = ({ roll }) => ({ dice: roll });
 const mapDispatchToProps = dispatch => ({
   onAdd: () => dispatch(addDice()),
   onRemove: () => dispatch(removeDice()),
-  onRoll: diceCount => () => dispatch(roll(diceCount))
+  onRoll: diceCount => dispatch(roll(diceCount))
 });
 
 const Roll = ({ dice, onAdd, onRemove, onRoll }) => {
@@ -77,7 +77,8 @@ const Roll = ({ dice, onAdd, onRemove, onRoll }) => {
       } else {
         setAnimatedDice(
           dice.map((die, i) => {
-            const index = i + count;
+            const int = i * 2;
+            const index = i + count + int;
 
             return uniqueDiceResults[index % uniqueDiceResults.length];
           })
@@ -114,7 +115,7 @@ const Roll = ({ dice, onAdd, onRemove, onRoll }) => {
 
         <AllDice>
           {dice.map((value, i) => (
-            <Dice key={i}>
+            <Dice key={i} backgroundColor={diceColors[getDice(value, i)]}>
               <Title>
                 Dice {i + 1}: {getDice(value, i)}
               </Title>
