@@ -5,6 +5,7 @@ import Ability from "./Ability";
 import Item from "./Item";
 import Skill from "./Skill";
 import Monster from "./Monster";
+import RollTable from "./RollTable";
 
 const mapStateToProps = ({ resources }, { id }) => {
   const resource = resources[id];
@@ -22,6 +23,8 @@ const mapStateToProps = ({ resources }, { id }) => {
       return { Component: Skill };
     case "monster":
       return { Component: Monster };
+    case "rolltable":
+      return { Component: RollTable };
 
     default:
       throw new Error(`No component for this type ${resource.type}`);

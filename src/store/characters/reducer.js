@@ -17,7 +17,8 @@ const newCharacter = {
     skill: [],
     ability: [],
     item: [],
-    monster: []
+    monster: [],
+    rolltable: []
   }
 };
 

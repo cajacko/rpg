@@ -8,6 +8,8 @@ import Skill from "../components/Skill";
 import SkillRender from "../components/Skill/Skill";
 import Monster from "../components/Monster";
 import MonsterRender from "../components/Monster/Monster";
+import RollTable from "../components/RollTable";
+import RollTableRender from "../components/RollTable/RollTable";
 
 const getResourceFromType = (type, render) => {
   switch (type) {
@@ -21,6 +23,8 @@ const getResourceFromType = (type, render) => {
       return render ? SkillRender : Skill;
     case "monster":
       return render ? MonsterRender : Monster;
+    case "rolltable":
+      return render ? RollTableRender : RollTable;
     default:
       throw new Error(`No resource for type ${type}`);
   }

@@ -124,6 +124,13 @@ const Characters = ({ characters, onDelete, onNameChange }) => {
             character={character}
             type="monster"
           />
+          <ResourceList
+            title="Roll Tables"
+            horizontal
+            resources={lists.rolltable}
+            character={character}
+            type="rolltable"
+          />
         </Inner>
       </List>
     </Container>

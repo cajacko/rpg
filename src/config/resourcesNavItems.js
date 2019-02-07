@@ -18,6 +18,10 @@ const resourcesNavItems = [
   {
     text: "Monsters",
     route: "/resources/monster"
+  },
+  {
+    text: "Roll Tables",
+    route: "/resources/rolltable"
   }
   // {
   //   text: "Reference Sheets",
