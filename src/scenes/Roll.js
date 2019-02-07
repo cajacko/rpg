@@ -1,7 +1,8 @@
-import * as React from "react";
+import React, { useState } from "react";
 import { connect } from "react-redux";
 import styled from "styled-components";
 import { addDice, removeDice, roll } from "../store/roll/actions";
+import { uniqueDiceResults } from "../config/diceResults";
 
 const Container = styled.div`
   flex: 1;
@@ -59,27 +60,71 @@ const mapDispatchToProps = dispatch => ({
   onRoll: diceCount => () => dispatch(roll(diceCount))
 });
 
-const Roll = ({ dice, onAdd, onRemove, onRoll }) => (
-  <Container>
-    <Inner>
-      <Actions>
-        <Button onClick={onAdd}>Add 1 Dice</Button>
-        <Button onClick={onRoll(dice.length)}>Roll Dice</Button>
-        <Button onClick={onRemove}>Remove 1 Dice</Button>
-      </Actions>
+const Roll = ({ dice, onAdd, onRemove, onRoll }) => {
+  const [animatedDice, setAnimatedDice] = useState(null);
 
-      <AllDice>
-        {dice.map((value, i) => (
-          <Dice key={i}>
-            <Title>
-              Dice {i + 1}: {value || "Roll"}
-            </Title>
-          </Dice>
-        ))}
-      </AllDice>
-    </Inner>
-  </Container>
-);
+  const animate = () => {
+    let count = 0;
+
+    let interval = null;
+
+    const run = () => {
+      count += 1;
+
+      if (count > 5 && interval) {
+        clearInterval(interval);
+        setAnimatedDice(null);
+      } else {
+        setAnimatedDice(
+          dice.map((die, i) => {
+            const index = i + count;
+
+            return uniqueDiceResults[index % uniqueDiceResults.length];
+          })
+        );
+      }
+    };
+
+    run();
+
+    interval = setInterval(run, 100);
+  };
+
+  const getDice = (value, i) => {
+    if (animatedDice) return animatedDice[i];
+
+    return value || "Roll";
+  };
+
+  return (
+    <Container>
+      <Inner>
+        <Actions>
+          <Button onClick={onAdd}>Add 1 Dice</Button>
+          <Button
+            onClick={() => {
+              animate();
+              onRoll(dice.length);
+            }}
+          >
+            Roll Dice
+          </Button>
+          <Button onClick={onRemove}>Remove 1 Dice</Button>
+        </Actions>
+
+        <AllDice>
+          {dice.map((value, i) => (
+            <Dice key={i}>
+              <Title>
+                Dice {i + 1}: {getDice(value, i)}
+              </Title>
+            </Dice>
+          ))}
+        </AllDice>
+      </Inner>
+    </Container>
+  );
+};
 
 export default connect(
   mapStateToProps,
