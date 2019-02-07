@@ -2,7 +2,10 @@ import { withRouter } from "react-router-dom";
 import { compose } from "redux";
 import { connect } from "react-redux";
 import ResourceList from "./ResourceList";
-import { selectResources } from "../../store/resources/selectors";
+import {
+  selectResources,
+  sortResources
+} from "../../store/resources/selectors";
 import resourcesNavItems from "../../config/resourcesNavItems";
 import resourceItems from "../../config/resourceItems";
 import { addRandResource } from "../../store/characters/actions";
@@ -40,7 +43,11 @@ const getType = props => {
 
 const mapStateToProps = (state, props) => ({
   resources:
-    props.resources || selectResources(getType(props), state.resources),
+    props.resources ||
+    sortResources(
+      state.resources,
+      selectResources(getType(props), state.resources)
+    ),
   title: props.title || getTitle(props)
 });
 
