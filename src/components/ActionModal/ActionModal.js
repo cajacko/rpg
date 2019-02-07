@@ -68,7 +68,14 @@ const ActionModal = ({
     <Modal onClose={onClose}>
       <Container>
         <Button onClick={() => onEdit(id)}>Edit</Button>
-        <Button onClick={onDelete}>Delete everywhere</Button>
+        <Button
+          onClick={() => {
+            onDelete();
+            onClose();
+          }}
+        >
+          Delete everywhere
+        </Button>
 
         {character !== undefined && (
           <Button
@@ -82,7 +89,14 @@ const ActionModal = ({
         )}
 
         {showToggleAdvantage && (
-          <Button onClick={toggleSkill}>Toggle Skill</Button>
+          <Button
+            onClick={() => {
+              toggleSkill();
+              onClose();
+            }}
+          >
+            Toggle Skill
+          </Button>
         )}
 
         <Section>
@@ -112,6 +126,7 @@ const ActionModal = ({
             </Button>
           </Section>
         )}
+        <Button onClick={onClose}>Close</Button>
       </Container>
     </Modal>
   );
