@@ -11,7 +11,7 @@ const selectAllResourceIDs = createSelector(
     )
 );
 
-const selectResourcesByType = createSelector(
+export const selectResourcesByType = createSelector(
   type => type,
   (type, resources) => resources,
   (type, resources) =>

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import ResourceList from "../../components/ResourceList/ResourceList";
+import ResourceList from "../../components/ResourceList";
 import TextInput from "../../components/Forms/TextInput";
 
 const Container = styled.div`
@@ -81,24 +81,28 @@ const Characters = ({ characters, onDelete, onNameChange }) => {
             horizontal
             resources={lists.character}
             character={character}
+            type="character"
           />
           <ResourceList
             title="Skills"
             horizontal
             resources={lists.skill}
             character={character}
+            type="skill"
           />
           <ResourceList
             title="Abilities"
             horizontal
             resources={lists.ability}
             character={character}
+            type="ability"
           />
           <ResourceList
             title="Items"
             horizontal
             resources={lists.item}
             character={character}
+            type="item"
           />
         </Inner>
       </List>

@@ -12,11 +12,15 @@ const Container = styled.div`
 
 const Inner = styled.div``;
 
+const TitleBar = styled.div`
+  display: flex;
+  background-color: #e4e4e4;
+  justify-content: space-between;
+`;
+
 const Title = styled.span`
   font-size: 20px;
-  display: flex;
   padding: 5px;
-  background-color: #e4e4e4;
 `;
 
 const List = styled.div`
@@ -37,6 +41,13 @@ const CardContainer = styled.div`
   padding: 15px 5px;
   overflow: hidden;
   justify-content: center;
+`;
+
+const AddRand = styled.button`
+  font-size: 16px;
+  padding: 5px;
+  cursor: pointer;
+  margin-left: 20px;
 `;
 
 class ResourceList extends React.Component {
@@ -88,16 +99,21 @@ class ResourceList extends React.Component {
   }
 
   render() {
-    const { horizontal, title, character } = this.props;
+    const { horizontal, title, character, addRand } = this.props;
     const { loading, resources } = this.state;
 
     return (
       <Container horizontal={horizontal}>
         <Inner>
           {title && (
-            <Title horizontal={horizontal}>
-              {title} {loading && "(Loading)"}
-            </Title>
+            <TitleBar>
+              <Title horizontal={horizontal}>
+                {title} {loading && "(Loading)"}
+              </Title>
+              {typeof character === "number" && (
+                <AddRand onClick={addRand}>Add Random Item</AddRand>
+              )}
+            </TitleBar>
           )}
 
           <List horizontal={horizontal}>
