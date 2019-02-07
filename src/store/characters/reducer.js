@@ -16,7 +16,8 @@ const newCharacter = {
     character: [],
     skill: [],
     ability: [],
-    item: []
+    item: [],
+    monster: []
   }
 };
 

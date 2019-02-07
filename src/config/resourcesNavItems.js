@@ -14,6 +14,10 @@ const resourcesNavItems = [
   {
     text: "Items",
     route: "/resources/item"
+  },
+  {
+    text: "Monsters",
+    route: "/resources/monster"
   }
   // {
   //   text: "Reference Sheets",

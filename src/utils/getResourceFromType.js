@@ -6,6 +6,8 @@ import Item from "../components/Item";
 import ItemRender from "../components/Item/Item";
 import Skill from "../components/Skill";
 import SkillRender from "../components/Skill/Skill";
+import Monster from "../components/Monster";
+import MonsterRender from "../components/Monster/Monster";
 
 const getResourceFromType = (type, render) => {
   switch (type) {
@@ -17,6 +19,8 @@ const getResourceFromType = (type, render) => {
       return render ? ItemRender : Item;
     case "skill":
       return render ? SkillRender : Skill;
+    case "monster":
+      return render ? MonsterRender : Monster;
     default:
       throw new Error(`No resource for type ${type}`);
   }

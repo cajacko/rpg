@@ -105,6 +105,13 @@ const Characters = ({ characters, onDelete, onNameChange }) => {
             character={character}
             type="item"
           />
+          <ResourceList
+            title="Monsters"
+            horizontal
+            resources={lists.monster}
+            character={character}
+            type="monster"
+          />
         </Inner>
       </List>
     </Container>

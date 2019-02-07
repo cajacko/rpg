@@ -4,6 +4,7 @@ import Character from "./Character";
 import Ability from "./Ability";
 import Item from "./Item";
 import Skill from "./Skill";
+import Monster from "./Monster";
 
 const mapStateToProps = ({ resources }, { id }) => {
   const resource = resources[id];
@@ -19,6 +20,8 @@ const mapStateToProps = ({ resources }, { id }) => {
       return { Component: Item };
     case "skill":
       return { Component: Skill };
+    case "monster":
+      return { Component: Monster };
 
     default:
       throw new Error(`No component for this type ${resource.type}`);
