@@ -31,6 +31,8 @@ const Clear = styled.button`
   cursor: pointer;
   font-size: 16px;
   padding: 10px 5px;
+  appearance: none;
+  appearance: none;
 `;
 
 const ResourcesScene = () => {

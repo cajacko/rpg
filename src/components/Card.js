@@ -16,6 +16,7 @@ const Button = styled.button`
   margin: 0;
   cursor: pointer;
   box-shadow: ${getShadow} #00000063;
+  appearance: none;
 `;
 
 const Div = styled.div`

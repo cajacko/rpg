@@ -21,6 +21,8 @@ const Button = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
+  appearance: none;
+  background-color: white;
 `;
 
 const List = styled.div`
@@ -38,6 +40,7 @@ const ListButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
+  appearance: none;
 `;
 
 const ListText = styled.span`

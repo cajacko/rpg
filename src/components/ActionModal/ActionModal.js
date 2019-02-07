@@ -19,6 +19,7 @@ const Button = styled.button`
   justify-content: center;
   font-size: 16px;
   cursor: pointer;
+  appearance: none;
 `;
 
 const Section = styled.div`

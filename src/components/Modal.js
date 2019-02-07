@@ -16,6 +16,7 @@ const Button = styled.button`
   cursor: pointer;
   z-index: 9001;
   opacity: 0;
+  appearance: none;
 `;
 
 const Container = styled.div`
@@ -37,9 +38,12 @@ const ModalChild = styled.div`
   ${({ noFlex }) => (noFlex ? "" : "flex: 1;")}
   box-shadow: 3px 3px 6px #00000061;
   z-index: 9002;
-  max-width: 100vw;
+  max-width: 500px;
   max-height: 100vh;
+  min-width: 300px;
+  width: 100%;
   overflow: scroll;
+  position: relative;
 `;
 
 const render = ({ children }) => <ModalChild>{children}</ModalChild>;

@@ -48,6 +48,7 @@ const AddRand = styled.button`
   padding: 5px;
   cursor: pointer;
   margin-left: 20px;
+  appearance: none;
 `;
 
 class ResourceList extends React.Component {

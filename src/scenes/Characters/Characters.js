@@ -29,6 +29,7 @@ const Button = styled.button`
   justify-content: center;
   font-size: 16px;
   padding: 10px;
+  appearance: none;
 `;
 
 const getCharacterIndexChange = (characters, currentIndex, next) => {

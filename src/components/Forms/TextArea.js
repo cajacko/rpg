@@ -6,8 +6,10 @@ const Input = styled.textarea`
   flex: 1;
   font-size: 16px;
   padding: 15px 5px;
-  height: 50px;
+  height: 100px;
   width: 100%;
+  appearance: none;
+  box-sizing: border-box;
 `;
 
 const TextArea = ({ placeholder, value, onChange }) => (

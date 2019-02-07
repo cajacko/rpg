@@ -7,6 +7,8 @@ const Input = styled.select`
   font-size: 16px;
   padding: 15px 5px;
   width: 100%;
+  appearance: none;
+  box-sizing: border-box;
 `;
 
 const Select = ({ value, onChange, choices }) => (

@@ -25,7 +25,8 @@ const Form = styled.div`
   display: flex;
   margin: 20px 0;
   flex-direction: column;
-  min-width: 400px;
+  max-width: 400px;
+  width: 100%;
 `;
 
 const InputGroup = styled.div`
@@ -57,6 +58,7 @@ const Button = styled.button`
   padding: 10px;
   font-size: 16px;
   cursor: pointer;
+  appearance: none;
 `;
 
 const AddModal = ({

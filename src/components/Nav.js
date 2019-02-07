@@ -17,6 +17,7 @@ const Button = styled.button`
   justify-content: center;
   flex-direction: column;
   cursor: pointer;
+  appearance: none;
 `;
 
 const Text = styled.span`

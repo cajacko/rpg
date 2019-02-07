@@ -51,6 +51,7 @@ const Delete = styled.button`
   cursor: pointer;
   font-size: 16px;
   padding: 20px;
+  appearance: none;
 `;
 
 const mapStateToProps = ({ variables }) => ({ variables });
