@@ -60,6 +60,13 @@ const mapDispatchToProps = dispatch => ({
   onRoll: diceCount => dispatch(roll(diceCount))
 });
 
+const sort = (a, b) => {
+  if (!a) return -1;
+  if (!b) return 1;
+
+  return uniqueDiceResults.indexOf(b) - uniqueDiceResults.indexOf(a);
+};
+
 const Roll = ({ dice, onAdd, onRemove, onRoll }) => {
   const [animatedDice, setAnimatedDice] = useState(null);
 
@@ -114,7 +121,7 @@ const Roll = ({ dice, onAdd, onRemove, onRoll }) => {
         </Actions>
 
         <AllDice>
-          {dice.map((value, i) => (
+          {dice.sort(sort).map((value, i) => (
             <Dice key={i} backgroundColor={diceColors[getDice(value, i)]}>
               <Title>
                 Dice {i + 1}: {getDice(value, i)}
