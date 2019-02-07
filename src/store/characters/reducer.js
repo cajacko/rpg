@@ -29,7 +29,7 @@ const addResourceToCharacter = (state, index, type, resourceId) => {
   const character = cloneDeep(newState[index] || newCharacter);
 
   if (!character.lists[type].includes(resourceId)) {
-    character.lists[type].push(resourceId);
+    character.lists[type].unshift(resourceId);
   }
 
   newState[index] = character;
