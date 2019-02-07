@@ -17,6 +17,7 @@ const Button = styled.button`
   cursor: pointer;
   box-shadow: ${getShadow} #00000063;
   appearance: none;
+  text-align: left;
 `;
 
 const Div = styled.div`
