@@ -31,7 +31,9 @@ const List = styled.div`
 
 const ListInner = styled.div`
   display: flex;
-  flex-direction: ${({ horizontal }) => (horizontal ? "row" : "column")};
+  flex-direction: row;
+  ${({ horizontal }) =>
+    horizontal ? "" : "flex-wrap: wrap; justify-content: center;"}
   ${({ horizontal }) =>
     horizontal ? "padding: 20px;" : "padding-bottom: 100px;"}
 `;

@@ -7,7 +7,14 @@ import ResourceList from "../components/ResourceList";
 const Container = styled.div`
   display: flex;
   flex: 1;
+  justify-content: center;
+`;
+
+const Inner = styled.div`
+  display: flex;
+  flex: 1;
   flex-wrap: wrap;
+  max-width: 900px;
 `;
 
 const Button = styled.button`
@@ -30,11 +37,13 @@ const Resources = ({ history: { push }, search }) => {
 
   return (
     <Container>
-      {resourcesNavItems.map(({ text, route }) => (
-        <Button key={route} onClick={() => push(route)}>
-          <Text>{text}</Text>
-        </Button>
-      ))}
+      <Inner>
+        {resourcesNavItems.map(({ text, route }) => (
+          <Button key={route} onClick={() => push(route)}>
+            <Text>{text}</Text>
+          </Button>
+        ))}
+      </Inner>
     </Container>
   );
 };

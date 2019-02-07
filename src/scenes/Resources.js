@@ -25,6 +25,13 @@ const Search = styled.div`
   box-shadow: 0 0 5px #2727277a;
   position: relative;
   z-index: 100;
+  justify-content: center;
+`;
+
+const Inner = styled.div`
+  display: flex;
+  max-width: 900px;
+  flex: 1;
 `;
 
 const Clear = styled.button`
@@ -42,12 +49,14 @@ const ResourcesScene = () => {
   return (
     <Container>
       <Search>
-        <TextInput
-          placeholder="Search"
-          value={finalSearch || ""}
-          onChange={setSearch}
-        />
-        <Clear onClick={() => setSearch(null)}>Clear Search</Clear>
+        <Inner>
+          <TextInput
+            placeholder="Search"
+            value={finalSearch || ""}
+            onChange={setSearch}
+          />
+          <Clear onClick={() => setSearch(null)}>Clear Search</Clear>
+        </Inner>
       </Search>
       <Routes routes={resourcesRoutes} search={finalSearch} />
       <ButtonPosition>

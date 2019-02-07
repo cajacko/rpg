@@ -8,6 +8,15 @@ const Container = styled.div`
   display: flex;
   flex-direction: row;
   height: 60px;
+  justify-content: center;
+  border-top: 1px solid #cecece;
+`;
+
+const Inner = styled.div`
+  display: flex;
+  max-width: 900px;
+  flex-direction: row;
+  flex: 1;
 `;
 
 const Button = styled.button`
@@ -27,12 +36,14 @@ const Text = styled.span`
 
 const Nav = ({ history: { push } }) => (
   <Container>
-    {navItems.map(({ icon, route, text }) => (
-      <Button key={route} onClick={() => push(route)}>
-        <FontAwesomeIcon size="2x" icon={icon} />
-        <Text>{text}</Text>
-      </Button>
-    ))}
+    <Inner>
+      {navItems.map(({ icon, route, text }) => (
+        <Button key={route} onClick={() => push(route)}>
+          <FontAwesomeIcon size="2x" icon={icon} />
+          <Text>{text}</Text>
+        </Button>
+      ))}
+    </Inner>
   </Container>
 );
 

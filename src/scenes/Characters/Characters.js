@@ -12,6 +12,14 @@ const Container = styled.div`
 
 const Header = styled.div`
   display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #717171;
+`;
+
+const HeaderInner = styled.div`
+  display: flex;
+  flex: 1;
+  max-width: 900px;
 `;
 
 const List = styled.div`
@@ -54,26 +62,30 @@ const Characters = ({ characters, onDelete, onNameChange }) => {
   return (
     <Container>
       <Header>
-        <Button
-          onClick={() =>
-            setCharacter(getCharacterIndexChange(characters, character, false))
-          }
-        >
-          Prev
-        </Button>
-        <TextInput
-          placeholder="Set a name"
-          value={name}
-          onChange={onNameChange(character)}
-        />
-        <Button onClick={() => onDelete(character)}>Delete</Button>
-        <Button
-          onClick={() =>
-            setCharacter(getCharacterIndexChange(characters, character, true))
-          }
-        >
-          Next
-        </Button>
+        <HeaderInner>
+          <Button
+            onClick={() =>
+              setCharacter(
+                getCharacterIndexChange(characters, character, false)
+              )
+            }
+          >
+            Prev
+          </Button>
+          <TextInput
+            placeholder="Set a name"
+            value={name}
+            onChange={onNameChange(character)}
+          />
+          <Button onClick={() => onDelete(character)}>Delete</Button>
+          <Button
+            onClick={() =>
+              setCharacter(getCharacterIndexChange(characters, character, true))
+            }
+          >
+            Next
+          </Button>
+        </HeaderInner>
       </Header>
       <List>
         <Inner>
