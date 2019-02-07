@@ -7,7 +7,7 @@ const Container = styled.div`
   display: flex;
   flex: 1;
   padding: 10px;
-  background-color: #e0cac6;
+  background-color: #ead8d4;
   flex-direction: column;
 `;
 
@@ -40,7 +40,7 @@ const Label = styled.td`
   font-size: 10px;
   display: flex;
   width: ${labelWidth}px;
-  background-color: #e4d1ce;
+  background-color: #efe0dd;
   align-items: center;
   justify-content: center;
 `;
