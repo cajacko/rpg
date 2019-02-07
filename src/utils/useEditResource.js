@@ -10,9 +10,7 @@ const useEditResource = (type, initState) => {
     (acc, key) =>
       Object.assign({}, acc, {
         [key]:
-          typeof initState[key] === undefined
-            ? props[key].defaultVal
-            : initState[key]
+          initState[key] === undefined ? props[key].defaultVal : initState[key]
       }),
     {}
   );
