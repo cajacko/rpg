@@ -23,7 +23,7 @@
 2. Advantage/Disadvantage
 
 #### Roll bonuses and penalties
-These modifiers to rolls are caused by **passive effects**, such as persistent buffs or debuffs from items, or long term status effects. A good example is an item that gives a bonus to a characters dexterity, helping them to jump across an obstacle.
+These modifiers to rolls are caused by **passive effects**, such as persistent buffs or debuffs from items, or long term status effects. A good example is an item that gives a bonus to a characters dexterity, helping them to jump across an obstacle. A bonus or penalty adds or minuses 1 to your roll. So if you have a +1 and your roll a **meh** is goes up one to become a **success**. That maximum bonus or penalty you can get is +-3. A bonus or penalty cannot effect a critical success or failure.
 
 #### Bonuses and crits
 Despite having a +1 or a -1 to a roll, a critical failure, or a critical success is always possible.
