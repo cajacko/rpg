@@ -9,7 +9,7 @@
 - #### Success
 	It worked! Complete your action, pass that check.
 - #### Meh
-	Nothing of note happens. Dwell upon your mediocrity as someone else takes their turn.
+	You may have succeeded or failed, this is down to the GM's discresion of which way it goes. Either way the result isn't very exciting.
 - #### Failure
 	The action or check didn't work. You could have merely been unlucky, or worded something poorly. Trying again is always an option.
 - #### Great Failure
