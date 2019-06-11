@@ -1,0 +1,82 @@
+# Random Event
+
+- Setup
+  - Choose a scenario
+    - Go to our app/website and search for a scenario you like the look of
+  - GM reads the whole scenario and announces any special rules or setup to the players
+  - Prepare monsters and NPC's (GM) (before players draw cards)
+    - Pick the monster cards from the scenario
+    - For each major NPC listed in the scenario pick out the character, skills, weapons, items and ability cards for them.
+  - Create characters (each player)
+    - Pick a character card
+    - Pick 6 random skills (3 + side up, 3 - side up)
+    - Pick 1 random weapon
+    - Pick 2 random starting items
+    - Pick 3 random abilities
+- Playing
+  - Making decisions and outcomes
+  - For any action worth rolling for the outcome, the GM decides how challenging it is based off this Difficulty Scale. (From the point of view of the character, monster or object initiating the action) They take into account characters skills (advantages make something easier, disadvantages harder), the situation and who/if any they are acting upon (if your trying to shoot someone who is very fast, it will be harder)
+    - Very easy (-2)
+    - Easy (-1)
+    - 50/50 (0)
+    - Hard (+1)
+    - Very hard (+2)
+  - The player or GM then rolls the dice and sees the result based on the following table. They increase or decrease the result by the difficulty rating to get a final result. E.g. the difficulty is easy (-1) and you rolled a fail(4) so it becomes a success(3)
+    - Critical success (1/20) 20
+    - Great success (3/20) 17-19
+    - Success (6/20)11-16
+    - Fail (6/20) 5-10
+    - Bad fail (3/20) 2-4
+    - Critical fail (1/20) - 1
+  - The GM uses the final result to narrate how the action played out
+  - Combat and damage
+    - During combat the game is slowed down and characters ... Initiative?
+    - When it's your turn in combat you must limit your turn to anything you can do in 5 seconds
+    - When attacking you make a roll the same as described above. However to calculate the amount of damage you do the GM gets to take into account what you attacked with and how well you rolled, then picks an outcome from the following damage scale, and deals that amount of damage to the characters health:
+      - Miniscule (-1)
+      - Small amount of damage (-2)
+      - Medium damage (-3)
+      - Heavy damage (-4)
+      - Incredible damage (-5)
+      - Absolutely devestating (-6)
+    - When a character has reached 0 health they are now dead, you may have abilities or items that might prevent you from dying, make sure you use them
+  - Using weapons, items and abilities
+    - Weapons
+      - May describe special rules of give an indication of how much damage they usually do
+    - Items
+      - Use the description on the card to inspire how you use it
+    - Abilities
+      - Follow the card description
+  - Keeping track
+    - Use the tracker in the mobile app to keep track of things like health, ammo, money etc
+- Finishing the game
+
+  - You finish the game under several situations
+    - You complete the scenario objectives
+    - GM may decide to wrap up the story a little after the objectives are complete
+    - The objectives are now impossible to complete
+      - E.g. a character you were meant to save has died
+    - Every player dies
+    - Enough players dies that you got bored
+    - You got bored anyway
+
+- Advanced rules
+
+  - Story points
+  - Energy
+  - Character ability restrictions
+  - Bullet time
+  - Coming back when you die
+  - Leveling up
+  - Peristant play
+  - Effects tables
+
+- Basic rules
+
+  - Can play with map tiles and more well written scenarios. To get you into it
+
+- Guides
+  - Player's guide
+  - GM guide
+  - Writing scenarios
+  - Mobile app
