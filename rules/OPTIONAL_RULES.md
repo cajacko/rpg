@@ -17,3 +17,7 @@
 ## Effects tables
 
 ## Guided Scenarios and Map Tiles
+
+## Alignment
+
+## Insanity
