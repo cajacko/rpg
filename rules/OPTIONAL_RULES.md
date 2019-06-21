@@ -21,3 +21,5 @@
 ## Alignment
 
 ## Insanity
+
+## Companions
