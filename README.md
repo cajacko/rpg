@@ -1,9 +1,9 @@
 # Random Event
 
-- [Random Event](#random-event)
-  - [Playing the Game](#playing-the-game)
-  - [Developing the Game](#developing-the-game)
+A dead simple tabletop role playing game.
 
-## Playing the Game
+Check out the current rule set at: [Rules](rules/README.md)
 
-## Developing the Game
+## Developing the game
+
+Checkout the [Project Canvas](CANVAS.md) to help develop the game.
