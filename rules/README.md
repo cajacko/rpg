@@ -168,14 +168,14 @@ is going to be. They pick one of the options from this scale.
 
 ### Outcome Scale
 
-| Outcome          | Description                                                                                     | Outcome Rating | d20 roll |
-| ---------------- | ----------------------------------------------------------------------------------------------- | -------------- | -------- |
-| Critical Success | The actions succeeded better than your wildest dreams, something spectacular is about to happen | 1              | 20       |
-| Great Success    | You nailed it! Something awesome happens                                                        | 2              | 17-19    |
-| Success          | You succeeded but nothing special happened                                                      | 3              | 11 - 16  |
-| Fail             | You did not do well, but nothing disastrous happens                                             | 4              | 5 - 10   |
-| Bad Fail         | You failed so badly. This is going to hurt                                                      | 5              | 2-4      |
-| Critical Fail    | You catastrophically failed, so much is about to go wrong                                       | 6              | 1        |
+| Outcome          | Description                                                                                     | Outcome Rating | d20 roll | 3d6 roll |
+| ---------------- | ----------------------------------------------------------------------------------------------- | -------------- | -------- | -------- |
+| Critical Success | The actions succeeded better than your wildest dreams, something spectacular is about to happen | 1              | 20       | 18       |
+| Great Success    | You nailed it! Something awesome happens                                                        | 2              | 17 - 19  | 15 - 17  |
+| Success          | You succeeded but nothing special happened                                                      | 3              | 11 - 16  | 11 - 14  |
+| Fail             | You did not do well, but nothing disastrous happens                                             | 4              | 5 - 10   | 7 - 10   |
+| Bad Fail         | You failed so badly. This is going to hurt                                                      | 5              | 2-4      | 4 - 6    |
+| Critical Fail    | You catastrophically failed, so much is about to go wrong                                       | 6              | 1        | 3        |
 
 ### Damage Scale
 

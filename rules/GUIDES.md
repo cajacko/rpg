@@ -5,5 +5,3 @@
 ## GM guide
 
 ## Writing scenarios
-
-## Mobile app

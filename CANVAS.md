@@ -131,3 +131,4 @@ _What are you most uncertain about? Prioritise this list and add potential tests
 - **What status cards do we need and how many**
 - **Would allowing players to re-roll if they have proficiency in a skill be a good idea, if they have to take the next result? Adds a fun gamble to the game.**
 - **Should we have rolling for hit and rolling for dodge/armour? 1 roll doesn't feel like there's enough player agency**
+- **Would fate cards work better than rolling and the story?**
